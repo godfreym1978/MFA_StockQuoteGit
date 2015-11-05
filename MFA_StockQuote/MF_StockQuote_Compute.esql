@@ -1,4 +1,4 @@
-BROKER SCHEMA MFA_StockQuote
+--BROKER SCHEMA MFA_StockQuote
 
 
 CREATE COMPUTE MODULE MF_StockQuote_Compute

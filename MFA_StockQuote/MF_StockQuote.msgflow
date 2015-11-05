@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmSOAPEnvelope.msgnode="ComIbmSOAPEnvelope.msgnode" xmlns:ComIbmWSInput.msgnode="ComIbmWSInput.msgnode" xmlns:ComIbmWSReply.msgnode="ComIbmWSReply.msgnode" xmlns:MFA_StockQuote_gen_SF_StockQuote.subflow="MFA_StockQuote/gen/SF_StockQuote.subflow" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility"
-    nsURI="MFA_StockQuote/MF_StockQuote.msgflow" nsPrefix="MFA_StockQuote_MF_StockQuote.msgflow">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmSOAPEnvelope.msgnode="ComIbmSOAPEnvelope.msgnode" xmlns:ComIbmWSInput.msgnode="ComIbmWSInput.msgnode" xmlns:ComIbmWSReply.msgnode="ComIbmWSReply.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:gen_SF_StockQuote.subflow="gen/SF_StockQuote.subflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility"
+    nsURI="MF_StockQuote.msgflow" nsPrefix="MF_StockQuote.msgflow">
   <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
     <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
-    <translation xmi:type="utility:TranslatableString" key="MF_StockQuote" bundleName="MFA_StockQuote/MF_StockQuote" pluginId="MFA_StockQuoteGit"/>
-    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MFA_StockQuoteGit/icons/full/obj16/MF_StockQuote.gif"/>
-    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MFA_StockQuoteGit/icons/full/obj30/MF_StockQuote.gif"/>
+    <translation xmi:type="utility:TranslatableString" key="MF_StockQuote" bundleName="MF_StockQuote" pluginId="MFA_StockQuote"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MFA_StockQuote/icons/full/obj16/MF_StockQuote.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/MFA_StockQuote/icons/full/obj30/MF_StockQuote.gif"/>
     <composition>
-      <nodes xmi:type="MFA_StockQuote_gen_SF_StockQuote.subflow:FCMComposite_1" xmi:id="FCMComposite_1_1" location="591,155">
+      <nodes xmi:type="gen_SF_StockQuote.subflow:FCMComposite_1" xmi:id="FCMComposite_1_1" location="591,155">
         <translation xmi:type="utility:ConstantString" string="GetQuote_stockquote"/>
         <shortDescription xmi:type="utility:ConstantString" string="Invokes WSDL operation and extracts the response from SOAP message."/>
         <longDescription xmi:type="utility:ConstantString" string="This subflow invokes the WSDL operation and extracts message body from the response message."/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="432,196" computeExpression="esql://routine/MFA_StockQuote#MF_StockQuote_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="432,196" computeExpression="esql://routine/#MF_StockQuote_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="CreateSOAPReq"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="876,259" computeExpression="esql://routine/MFA_StockQuote#MF_StockQuote_Compute1.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="876,259" computeExpression="esql://routine/#MF_StockQuote_Compute1.Main">
         <translation xmi:type="utility:ConstantString" string="CreateResp"/>
       </nodes>
       <nodes xmi:type="ComIbmSOAPEnvelope.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="576,312" createEnvelope="true">

@@ -1,19 +1,11 @@
+BROKER SCHEMA MFA_StockQuote
 
 
-CREATE COMPUTE MODULE MF_StockQuote_Compute1
+CREATE COMPUTE MODULE MF_StockQuote_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
 		-- CALL CopyEntireMessage();
-		
-		DECLARE sh NAMESPACE 'http://www.webserviceX.NET/';
-		DECLARE data CHAR;
-		SET data  = InputRoot.XMLNSC.sh:GetQuoteResponse.sh:GetQuoteResult;
-		CREATE LASTCHILD OF Environment.XMLNSC DOMAIN 'XMLNSC' PARSE (data 
-																			CCSID InputRoot.Properties.CodedCharSetId 
-																			ENCODING 0 ); 
-		
-		SET OutputRoot.XMLNSC = Environment.XMLNSC.XMLNSC;
 		RETURN TRUE;
 	END;
 
